@@ -1,0 +1,125 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% CV Jonathan Gruss Feb 22 %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\PassOptionsToPackage{dvipsnames}{xcolor}
+\documentclass[10pt,a4paper]{altacv}
+
+%Layout
+\geometry{left=1cm,right=1cm,top=1.25cm,bottom=1.25cm,footskip=2\baselineskip}
+
+%Packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[default]{lato}
+\usepackage{hyperref}
+\usepackage{enumitem, xcolor}
+\usepackage{paracol}
+\usepackage{comment}
+
+%Colors
+
+\definecolor{accent}{HTML}{077a4c}
+\definecolor{heading}{HTML}{71717a}
+\definecolor{emphasis}{HTML}{18181b}
+\definecolor{body}{HTML}{18181b}
+
+\colorlet{heading}{heading}
+\colorlet{accent}{accent}
+\colorlet{emphasis}{emphasis}
+\colorlet{body}{body}
+
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\usepackage{background}
+\usetikzlibrary{calc}
+\usepackage{lipsum}  % for dummy text
+
+\usepackage{paracol}
+
+\setlength{\columnsep}{0.5cm}
+
+\columnratio{0.618}
+
+\SetBgScale{1}
+\SetBgAngle{0}
+\SetBgOpacity{1.0}
+\SetBgColor{accent}
+\SetBgContents{
+\begin{tikzpicture}
+    \draw [line width=10pt]
+        ($ (current page.north west) + (-2cm, -4pt) $)
+        rectangle
+        ($ (current page.south east) + (+2cm, 4pt) $);
+\end{tikzpicture}}
+
+\begin{document}
+\photo{3cm}{me.jpg}
+\name{Jonathan Gruss}
+\tagline{Computer Science Major}
+\personalinfo{
+    \printinfo{\faBirthdayCake}{9th Aug 1995}
+    \email{jonathangruss@hotmail.com}
+    \phone{+4178 840 69 22}
+%    \mailaddress{SR Njemačke 6, 10000}
+    \location{St. Gallen, Switzerland}
+    \linkedin{linkedin.com/in/jonathangruss}
+%    \homepage{jaksatomovic.github.io}
+    \github{github.com/JonnysCode}
+}
+
+
+\makecvheader
+
+\begin{paracol}{2}
+
+\input{leftCol}
+
+\switchcolumn
+
+\input{rightCol}
+
+\end{paracol}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Certificates %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% \cvsection{Certificates}
+
+%%%%%%%%%%%%%
+%Certificate 1
+%%%%%%%%%%%%%
+
+% \cvevent{MCSD: App Builder — Certified 2019}{Microsoft}{Jan 2019 -- No Expiration Date}{}
+% \divider
+
+%%%%%%%%%%%%%
+%Certificate 2
+%%%%%%%%%%%%%
+
+% \cvevent{MCSA: Web Applications — Certified 2019}{Microsoft}{Jan 2019 -- No Expiration Date}{}
+% \divider
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Interests %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \cvsection{Interests}
+
+% \wheelchart{1.5cm}{0.5cm}{%
+%   10/10em/accent!30/Electronics,
+%   25/9em/accent!60/Science,
+%   5/13em/accent!10/Movies,
+%   20/15em/accent!40/Sport,
+%   30/9em/accent/Technology,
+%   5/8em/accent!20/Literature
+% }
+
+
+%%New Page
+% \clearpage
+
+
+
+
+\end{document}
